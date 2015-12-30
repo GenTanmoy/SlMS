@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Simple Light Management System</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- import bootstrap css file -->
+    <link href= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- style -->
+    <style>
+      #topspace{
+        height: 100px;
+        width: 100%;
+        background-color: #12086;
+      }
+      body{
+        background-image:url('Resources/background.jpg');
+      }
+    </style>
+
+    <!-- import angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <!--import mainController.js -->
+    <script src="JS/Controller/mainController.js"></script>
+
+  </head>
+  <body ng-app="mainApp" ng-controller="lightController">
+    <div class="container">
+      <div id="topspace"> </div>
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h2>Simple Light Management System<h2>
+        </div>
+        <div class="col-md-5"></div>
+        <div class="col-md-6">
+          <button class="btn btn-success btn-lg" ng-click="sendSignal('on')"> &nbsp ON &nbsp</button>
+          <button class="btn btn-danger btn-lg" ng-click="sendSignal('off')"> OFF </button>
+        </div>
+        </div>
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <label class="control-label info" ng-model="message"></label>
+        </div>
+  </body>
+</html>
